@@ -45,7 +45,6 @@ public class App4 {
                     flagSum = flagPr = false;
                     break;
                 }
-//                if ((Integer.MAX_VALUE / k >= sum) && (Integer.MIN_VALUE / k <= sum)) {
                 if (checkPr(pr, k)) {
                     pr *= k;
                 } else  {
