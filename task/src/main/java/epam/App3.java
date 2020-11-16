@@ -10,7 +10,7 @@ public class App3 {
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 10);
             if (i != 0) { // Выводим числа больше 5 с новой строки
-                System.out.print((array[i] > 5 ? "\n" : " ") + array[i]);
+                System.out.print((array[i] > 5 ? (array[i] == 0 ? "" : "\n") : " ") + array[i]);
             } else { // Выводим первое число
                 System.out.print(array[i]);
             }
