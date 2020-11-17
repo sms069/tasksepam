@@ -1,4 +1,4 @@
-package epam.fundamentals;
+package epam.fundamentals.task;
 
 /*
  *2.     Отобразить в окне консоли аргументы командной строки в обратном порядке.

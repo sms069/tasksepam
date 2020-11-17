@@ -1,4 +1,4 @@
-package epam.fundamentals;
+package epam.fundamentals.task;
 
 /*
  *  3.   Вывести заданное количество случайных чисел с переходом и без перехода на новую строку

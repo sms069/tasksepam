@@ -1,4 +1,4 @@
-package epam.fundamentals;
+package epam.fundamentals.task;
 
 /*
  * 4. Ввести целые числа как аргументы командной строки, подсчитать их сумму (произведение) и

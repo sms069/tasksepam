@@ -1,4 +1,4 @@
-package epam.fundamentals;
+package epam.fundamentals.task;
 
 import java.util.Scanner;
 
