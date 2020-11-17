@@ -1,4 +1,4 @@
-package epam;
+package epam.fundamentals;
 
 import java.util.Scanner;
 
@@ -23,10 +23,12 @@ public class App5_1 {
                         break;
                     }
                 }
-            } else throw new NumberFormatException();
+            } else {
+                System.err.println("Не правильный ввод числа");
+            }
+            ;
         } catch (NumberFormatException e) {
-            System.out.println("Не допустимое значение!");
-            main(args);
+            System.err.println("Не допустимое значение! " + e);
         }
     }
 }
@@ -47,15 +49,17 @@ enum Month {
 
     private int number;
     private String title;
-    private Month (int number, String title){
+
+    private Month(int number, String title) {
         this.number = number;
         this.title = title;
     }
-    public int getNumber(){
+
+    public int getNumber() {
         return this.number;
     }
-    public String getTitle(){
+
+    public String getTitle() {
         return this.title;
     }
 }
-

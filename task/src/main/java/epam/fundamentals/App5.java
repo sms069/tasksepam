@@ -1,4 +1,4 @@
-package epam;
+package epam.fundamentals;
 
 import java.util.Scanner;
 
@@ -54,11 +54,11 @@ public class App5 {
                         System.out.println("Декабрь");
                         break;
                 }
-            } else throw new NumberFormatException();
+            } else {
+                System.err.println("Не правильный ввод числа");
+            }
         } catch (NumberFormatException e) {
-            System.out.println("Не допустимое значение!");
-            main(args);
+            System.err.println("Не допустимое значение! " + e);
         }
     }
 }
-
