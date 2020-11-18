@@ -11,10 +11,14 @@ public class Numbers {
     private int[] numbers;
     private String[] binaryNumbers;
 
-    public Numbers() {
+    private void setNumbers() {
         NumbersReader numbersReader = new NumbersReader(new Scanner(System.in));
         this.numbers = numbersReader.readNumbers();
         this.binaryNumbers = numbersReader.toBinaryNumbers(numbers);
+    }
+
+    public Numbers() {
+        setNumbers();
         printNumbers();
     }
 
