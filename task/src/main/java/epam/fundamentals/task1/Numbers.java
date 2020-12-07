@@ -8,20 +8,28 @@ import java.util.*;
 
 public class Numbers {
 
-    public static int[] readNumbers(Scanner scanner) throws InputMismatchException {
+    private Scanner scanner;
+
+    public Numbers(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
+    public int[] readNumbers() throws InputMismatchException {
         System.out.println("Введите количество чисел больше 0");
         int quantity = scanner.nextInt();
         if (quantity <= 0) {
             throw new InputMismatchException();
         }
         int[] numbers = new int[quantity];
+        // здесь можно закоментировать автоматический рандомный или ручной ввод чисел
         for (int i = 0; i < quantity; i++) {
-            numbers[i] = (int) (Math.random() * 100);
+            numbers[i] = (int) (Math.random() * 10 * (Math.random() * 10 > 4 ? 1000 : 10));
+//            numbers[i] = scanner.nextInt();
         }
         return numbers;
     }
 
-    public static String[] toBinaryNumbers(int[] numbers) {
+    public String[] toBinaryNumbers(int[] numbers) {
         String[] binaryNumbers = new String[numbers.length];
         for (int i = 0; i < numbers.length; i++) {
             binaryNumbers[i] = Integer.toBinaryString(numbers[i]);
@@ -29,11 +37,12 @@ public class Numbers {
         return binaryNumbers;
     }
 
-    public static void printNumbers(int[] numbers) {
+    public void printNumbers(int[] numbers) {
+
         System.out.println("Массив чисел " + Arrays.toString(numbers));
     }
 
-    public static void printNumbers(String[] numbers) {
+    public void printNumbers(String[] numbers) {
         System.out.println("Массив чисел в двоичной системе " + Arrays.deepToString(numbers));
     }
 }
