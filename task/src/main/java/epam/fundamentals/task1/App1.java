@@ -11,9 +11,10 @@ public class App1 {
         for (int i = 1; i < binaryNumbers.length; i++) {
             if (binaryNumbers[i].length() < binaryNumbers[min].length()) {
                 min = i;
-            }
-            if (binaryNumbers[i].length() > binaryNumbers[max].length()) {
-                max = i;
+            } else {
+                if (binaryNumbers[i].length() > binaryNumbers[max].length()) {
+                    max = i;
+                }
             }
         }
         System.out.println("Самое длинное число = " + numbers[max] + " {" + binaryNumbers[max] + "}\n" +
