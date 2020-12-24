@@ -2,9 +2,11 @@ package epam.fundamentals.task1;
 
 // Найти самое короткое и самое длинное число. Вывести найденные числа и их длину.
 
+import java.util.Arrays;
+
 public class App1 {
 
-    public static void minMaxValueNumbers(int [] numbers, String [] binaryNumbers) {
+    public static void minMaxValueNumbers(int[] numbers, String[] binaryNumbers) {
         System.out.println("\n*Найти самое короткое и самое длинное число. Вывести найденные числа и их длину*");
         int min = 0;
         int max = 0;

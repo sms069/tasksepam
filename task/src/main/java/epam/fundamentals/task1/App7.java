@@ -1,8 +1,7 @@
 package epam.fundamentals.task1;
 
 /*
- *      Найти число, состоящее только из различных цифр.
- *      Если таких чисел несколько, найти первое из них.
+ *      Найти число, состоящее только из различных цифр. Если таких чисел несколько, найти первое из них.
  */
 
 import java.util.Arrays;
@@ -10,8 +9,8 @@ import java.util.Arrays;
 public class App7 {
 
     public static void different(int[] numbers) {
-        System.out.println("\n*Найти число, состоящее только из различных цифр." +
-                "\nЕсли таких чисел несколько, найти первое из них*");
+        System.out.println("\n*Найти число, состоящее только из различных цифр. " +
+                "Если таких чисел несколько, найти первое из них*");
         int[] diffNumber = new int[numbers.length];
         int indexDiff = 0;
         for (int i = 0; i < numbers.length; i++) {

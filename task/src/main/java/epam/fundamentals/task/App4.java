@@ -6,7 +6,6 @@ package epam.fundamentals.task;
  */
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class App4 {
     public static void main(String[] args) {

@@ -15,9 +15,9 @@ public class Numbers {
     }
 
     public int[] readNumbers() throws InputMismatchException {
-        System.out.println("Введите количество чисел больше 0");
+        System.out.println("Введите количество чисел больше 1");
         int quantity = scanner.nextInt();
-        if (quantity <= 0) {
+        if (quantity <= 1) {
             throw new InputMismatchException();
         }
         int[] numbers = new int[quantity];
