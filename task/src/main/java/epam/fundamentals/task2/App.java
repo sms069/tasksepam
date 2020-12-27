@@ -29,9 +29,14 @@ public class App {
         }
         Numbers.printNumbers(numbers);
         // Задание 1
-        App1.sortRandomNumbers(numbers);
+//        App1.sortRandomNumbers(numbers);
         // Задание 2
-        App2.findSortElem(numbers);
+//        App2.findSortElem(numbers);
+        // Задание 3
+//        App3.summElem(numbers);
+        // Задание 4
+        numbers = App4.removeMax(numbers);
+        Numbers.printNumbers(numbers);
     }
 
 }

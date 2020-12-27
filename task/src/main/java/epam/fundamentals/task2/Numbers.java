@@ -35,11 +35,15 @@ public class Numbers {
 
     // Печать массива
     public static void printNumbers(int[][] numbers) {
-        for (int[] number : numbers) {
-            for (int j = 0; j < numbers[0].length; j++) {
-                System.out.print(number[j] + " ");
+        if (numbers == null) {
+            System.out.println("Пустой массив!!!");
+        } else {
+            for (int[] number : numbers) {
+                for (int j = 0; j < numbers[0].length; j++) {
+                    System.out.print(number[j] + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
         }
     }
 
