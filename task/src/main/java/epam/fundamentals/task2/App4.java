@@ -1,6 +1,7 @@
 package epam.fundamentals.task2;
 
 import java.lang.*;
+import java.util.Arrays;
 
 /*
  * Найти максимальный элемент в матрице и удалить из матрицы все строки и столбцы, его содержащие
@@ -17,12 +18,12 @@ public class App4 {
         System.out.println("Максимальный элемент матрицы = " + maxElem);
         printNumberColorElem(numbers, maxElem);
         System.out.println("Удалим из матрицы все строки и столбцы, его содержащие");
-        while (maxElem == searchMaxElem(numbers)) {
+        do {
             numbers = removeLineColumn(numbers);
-            if (numbers == null) {
+            if (maxElem == 0 && numbers.length == 1 && numbers[0].length == 1) {
                 break;
             }
-        }
+        } while (maxElem == searchMaxElem(numbers));
         return numbers;
     }
 
@@ -42,11 +43,8 @@ public class App4 {
     }
 
     private static int[][] removeLineColumn(int[][] numbers) {
-        if (numbers == null) {
-            return null;
-        }
-        if (numbers.length <= 1 || numbers[0].length <= 1){
-            return null;
+        if (numbers.length == 1 || numbers[0].length == 1) {
+            return new int[1][1];
         }
         int[][] tmpArr = new int[numbers.length - 1][numbers[0].length - 1];
         for (int line = 0; line < numbers.length - 1; line++) {
@@ -69,7 +67,7 @@ public class App4 {
         return tmpArr;
     }
 
-    public static void printNumberColorElem(int[][] numbers, int elem){
+    public static void printNumberColorElem(int[][] numbers, int elem) {
         for (int[] number : numbers) {
             for (int i = 0; i < number.length; i++) {
                 if (number[i] == elem) {
