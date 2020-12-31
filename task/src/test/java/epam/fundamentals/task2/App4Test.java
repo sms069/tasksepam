@@ -26,8 +26,8 @@ public class App4Test {
 	@Test
 	public void removeMaxExpectNull() {
 		int[][] numbers = {
-				{6, 6, 6, 2, 3},
-				{2, 4, 3, 4, 2},
+				{7, 6, 6, 2, 3},
+				{5, 4, 3, 7, 2},
 				{2, 4, 2, 6, 7},
 				{2, 7, 2, 3, 3},
 				{7, 7, 7, 5, 7},
