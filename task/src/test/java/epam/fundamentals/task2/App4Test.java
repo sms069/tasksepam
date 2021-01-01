@@ -24,7 +24,7 @@ public class App4Test {
 	}
 
 	@Test
-	public void removeMaxExpectNull() {
+	public void removeMaxExpectEmpty() {
 		int[][] numbers = {
 				{7, 6, 6, 2, 3},
 				{5, 4, 3, 7, 2},
@@ -33,6 +33,7 @@ public class App4Test {
 				{7, 7, 7, 5, 7},
 		};
 		int[][] result = App4.removeMax(numbers);
-		assertNull(result);
+		int[][] expected = new int[1][1];
+		assertArrayEquals("not expected result", expected, result);
 	}
 }
